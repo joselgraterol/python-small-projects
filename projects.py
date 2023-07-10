@@ -49,4 +49,59 @@ team()
 # The += operator is used to concatenate the current value of name with a space character " " and then add it to the end of the current value of names.
 # So, for example, if the first name entered is "John", then names would become "John ". If the second name entered is "Mary", then names would become "John Mary ". And so on, until all 5 names have been entered.
 
+# -------------------------
+
+saludo = "multiplo de 5"
+
+for i in range(10+1):
+    if not i % 5:
+        print(f"{i} {saludo}")
+    elif i % 2:
+        print(f"{i} impar")
+    elif not i % 2:
+        print(f"{i} par")
+
+
+# ----------------
+
+
+todas_notas = []
+
+def add_nota():
+    nota_input = str(input("write a note: "))
+    todas_notas.append(nota_input)
+#     global num
+    
+   
+        
+
+def initiate():
+    add_nota()
+    seguir = str(input("quieres seguir? si o no? "))
+    if seguir == "si":
+       initiate()
+    elif seguir == "no":
+       add_notassss = False 
+        
+    
+initiate()
+
+
+def imprimir_notas():
+    print("sus notas son: ")
+    num = 1
+    for nota in todas_notas:
+        print(f"{num} {nota}")
+        num += 1
+
+imprimir_notas()
+    
+
+eli = str(input("quieres eliminar una nota? "))
+if eli == "si":
+    numero = int(input("seleccione un numero: "))
+    todas_notas.pop(numero - 1)
+    print(todas_notas)
+
+
 
