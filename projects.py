@@ -103,5 +103,27 @@ if eli == "si":
     todas_notas.pop(numero - 1)
     print(todas_notas)
 
+# ------------------------------------------------
+
+num_to_guess = []
+
+def game():
+    first_person_num = int(input("Give me a number between 1 and 10: "))
+    if first_person_num > 0 and first_person_num <= 10:
+        num_to_guess.append(first_person_num)
+        
+    num_of_guesses = 3
+    while num_of_guesses > 0:
+        num_attempt = int(input("guess the num8er: "))
+        if num_attempt in num_to_guess:
+            print("you guessed!!")
+            break
+        
+        num_of_guesses -= 1
+        
+    if num_of_guesses == 0:
+       print(f"you lost!! the num8er was: {first_person_num}") 
+            
+game()
 
 
