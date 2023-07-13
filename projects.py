@@ -151,3 +151,18 @@ max_num(array)
 
 
 # -----------------------------------------------------------------------
+
+# Write a function my_len that takes as input a list a_list and returns the number
+# of elements in that list (do not use the original len function, but implement your own way of counting the elements!).
+
+array = [1, 4, 56, 2, 3, 4, 6]
+
+def arr_length(arr):
+    acumulator = 0
+    for i in arr:
+        acumulator += 1
+    print(acumulator)
+    
+    
+      
+arr_length(array)
