@@ -1,3 +1,9 @@
+# ask for 3 numbers
+# print only the even numbers
+# look for the smallest even
+
+# version 1
+
 numbers = []
 
 def is_even(num):
@@ -25,12 +31,53 @@ def smallest_even():
    
 smallest_even()
 
+# version 2
+
+numbers = []
+num_even = []
+
+
+def create_array():
+    num_asked = 3
+    while num_asked > 0:
+        num_input = int(input("give me 3 num8ers: "))
+        numbers.append(num_input) 
+        num_asked -= 1
+    
+
+
+def filter_even(arr_num, arr_even):
+    for i in arr_num:
+        if i % 2 == 0:
+            arr_even.append(i)
+            
+def smallest_even(arr_even):
+    position = 0
+    value_1 = arr_even[0]
+    while position < len(arr_even):
+        current_value = arr_even[position]
+        if value_1 < current_value:
+            position += 1
+        else:
+            value_1 = current_value
+            position += 1
+    print(f"the smallest even num8er is {value_1}")
+    
+    
+def app():
+    create_array()
+    filter_even(numbers, num_even)
+    if len(num_even) > 0:
+        smallest_even(num_even)
+    
+    
+app()
 
 
 
 # -------------
 
-
+# ask for the name of 5 players and print them in a single line
 
 def team():
     players = 0
