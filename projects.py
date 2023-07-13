@@ -127,3 +127,27 @@ def game():
 game()
 
 
+# -----------------------------------------------------------------------
+
+# Write a function that takes a list of integers as a parameter
+# and returns the max element in the list. Do NOT use the built-in max() function.
+
+array = [2, 56, 90, 23, 100]
+
+def max_num(arr):
+    position = 0
+    value_1 = arr[0]
+    while position < len(arr):
+        current_value = arr[position]
+        if value_1 > current_value:
+            position += 1
+        else:
+            value_1 = current_value
+            position += 1
+    print(value_1)
+            
+max_num(array)
+
+
+
+# -----------------------------------------------------------------------
