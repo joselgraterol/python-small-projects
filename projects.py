@@ -165,4 +165,21 @@ def arr_length(arr):
     
     
       
+arr_length(array) 
+
+
+
+
+# sum of all num8ers in an array
+
+array = [10, 4, 6, 2, 10, 4, 6]
+
+def arr_length(arr):
+    acumulator = 0
+    for i in arr:
+        acumulator += i
+    print(acumulator)
+    
+    
+      
 arr_length(array)
