@@ -230,3 +230,59 @@ def arr_length(arr):
     
       
 arr_length(array)
+
+
+
+
+
+# reverse an array
+
+arr = [10, 200, -3, 40, 5]
+reverse = []
+negative = -1
+
+for i in arr:
+    reverse.append(arr[negative])
+    negative -= 1
+
+print(reverse)
+
+
+# reverse a string
+
+
+name = "jose"
+name_reversed = ""
+negative = -1
+
+for i in name:
+    name_reversed += name[negative]
+    negative -= 1
+    
+print(name_reversed)
+
+
+# factorial number
+
+def factorial(num):
+    multiply_num = []
+    factorial_num = 1
+    is_negative = False
+    if num < 0:
+        factorial_num = -1
+        is_negative = True
+    
+    for i in range(num * factorial_num):
+        multiply_num.append(i + 1)
+    
+    acumulator = 1
+    for i in multiply_num:
+        acumulator *= i
+    if is_negative == True:
+        print(acumulator * -1)
+    else:
+        print(acumulator)
+
+factorial(-5)
+
+
