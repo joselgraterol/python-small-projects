@@ -293,5 +293,76 @@ def factorial(number):
 factorial(5)
 
 
+# filtrar elementos repetidos
+array = [3, 90, 91, 2, 91, 2, 5, 3, 3, 4, 5, 5, 5, 5, 5, 6]
+print(array)
+
+filtered_arr = []
+
+def filter_array(arr):
+    for i in arr:
+        if i not in filtered_arr:
+           filtered_arr.append(i) 
+    print(filtered_arr)
+
+filter_array(array)
+
+
+# decir el menor numero
+
+arr = [90, 3, 102, 100, 1]
+position = 0
+current = arr[0]
+
+for i in arr:
+    if current < arr[position]:
+        position += 1
+    else:
+        current = arr[position]
+        position += 1
+
+print(current)
+
+
+# filtrar elementos repetidos y luego ordenarlos
+
+# filtrar elementos repetidos
+array = [3, 90, 91, 2, 91, 2, 5, 3, 3, 4, 5, 5, 5, 5, 5, 6]
+print(array)
+
+filtered_arr = []
+
+def filter_array(arr):
+    for i in arr:
+        if i not in filtered_arr:
+           filtered_arr.append(i) 
+    print(filtered_arr)
+
+# ordenar numeros de menor a mayor
+arr_menor_a_mayor = []
+
+def menor_a_mayor(arr_filtrado):
+    position = 0
+    current = arr_filtrado[0]
+    loop_position = 0
+    for i in arr_filtrado:
+        if current < arr_filtrado[position]:
+            position += 1
+        else:
+            current = arr_filtrado[position]
+            position += 1
+
+    arr_menor_a_mayor.append(current)
+    arr_filtrado.remove(current)
+    
+    
+def app():
+    filter_array(array)
+    n_iterations = 0
+    while n_iterations < len(filtered_arr):
+        menor_a_mayor(filtered_arr)
+    print(arr_menor_a_mayor)
+    
+app()
 
 
