@@ -264,25 +264,34 @@ print(name_reversed)
 
 # factorial number
 
-def factorial(num):
-    multiply_num = []
-    factorial_num = 1
-    is_negative = False
-    if num < 0:
-        factorial_num = -1
-        is_negative = True
+def factorial(number):
+    all_numbers = []
+    value = 0
+    iterate = 0
     
-    for i in range(num * factorial_num):
-        multiply_num.append(i + 1)
     
+    if number == 0:
+        print(value)
+        return
+    elif number > 0:
+        while iterate < number:
+            value += 1
+            all_numbers.append(value)
+            iterate += 1
+    elif number < 0:
+        while iterate > number:
+            value -= 1
+            all_numbers.append(value)
+            iterate -= 1
+    print(all_numbers)
     acumulator = 1
-    for i in multiply_num:
-        acumulator *= i
-    if is_negative == True:
-        print(acumulator * -1)
-    else:
-        print(acumulator)
+    for element in all_numbers:
+        acumulator *= element
+    print(f"el factorial de {number} es {acumulator}")
+            
 
-factorial(-5)
+factorial(5)
+
+
 
 
